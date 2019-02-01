@@ -10,6 +10,7 @@ df.drop('Unnamed: 5', axis=1, inplace=True)
 df['sales'] = df['sales'].astype('str')
 df['sales']=pd.to_numeric(df['sales'])
 # date convertion
+df['date'] = df['date'].apply(lambda x: dt.datetime.strptime(x, '%Y-%m-%d'))
 df['date_year'] = [x.strftime('%Y')for x in df['date']]
 df['date_month'] = [x.strftime('%m')for x in df['date']]
 # reading into csv
