@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS sales_series;
 USE sales_series;
-CREATE TABLE datasales 
+CREATE TABLE IF NOT EXISTS datasales 
 (
     model VARCHAR(20) NOT NULL,
     sales_date DATE NOT NULL,
