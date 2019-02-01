@@ -1,13 +1,8 @@
 import pandas as pd
-import numpy as np
-from datetime import datetime
-from pandas import Series
-
-# will ignore the warnings
 import datetime as dt
-import csv
 import warnings
 warnings.filterwarnings("ignore")
+
 # reading csv file
 df= pd.read_csv('sales.csv', sep=';', encoding='utf-8')
 df.drop('Unnamed: 5', axis=1, inplace=True)
