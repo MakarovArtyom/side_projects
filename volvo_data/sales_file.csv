@@ -1,4 +1,4 @@
-,model,date,sales,date_year,date_month
+index,model,date,sales,date_year,date_month
 0,S60 CC,2018-12-31,87,2018,12
 1,S60 II,2018-12-31,961,2018,12
 2,S60L,2018-12-31,1314,2018,12
