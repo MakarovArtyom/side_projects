@@ -20,5 +20,7 @@ df['sales']=pd.to_numeric(df['sales'])
 df['date_year'] = [x.strftime('%Y')for x in df['date']]
 df['date_month'] = [x.strftime('%m')for x in df['date']]
 # reading into sql
-engine = create_engine('sqlite:///sales.db', echo=False)
-df.to_sql('sales_db', con=engine)
+df=df[['model', 'date', 'sales', 'date_year', 'date_month']]
+# reading into sql
+df.to_csv('sales_file.csv', encoding='utf-8')
+
