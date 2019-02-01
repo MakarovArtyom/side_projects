@@ -5,8 +5,6 @@ from pandas import Series
 
 # will ignore the warnings
 import datetime as dt
-import sqlite3
-from sqlalchemy import create_engine
 import csv
 import warnings
 warnings.filterwarnings("ignore")
@@ -19,8 +17,6 @@ df['sales']=pd.to_numeric(df['sales'])
 # date convertion
 df['date_year'] = [x.strftime('%Y')for x in df['date']]
 df['date_month'] = [x.strftime('%m')for x in df['date']]
-# reading into sql
+# reading into csv
 df=df[['model', 'date', 'sales', 'date_year', 'date_month']]
-# reading into sql
 df.to_csv('sales_file.csv', encoding='utf-8')
-
