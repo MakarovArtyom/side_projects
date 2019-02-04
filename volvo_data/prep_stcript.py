@@ -15,4 +15,4 @@ df['date_year'] = [x.strftime('%Y')for x in df['date']]
 df['date_month'] = [x.strftime('%m')for x in df['date']]
 # reading into csv
 df=df[['model', 'date', 'sales', 'date_year', 'date_month']]
-df.to_csv('sales_file.csv', encoding='utf-8')
+df.to_csv('sales_full.csv', encoding='utf-8')
